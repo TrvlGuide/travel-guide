@@ -54,7 +54,7 @@ function Navbar() {
             </li>
             <li>
               <Link
-                to='/Feedback'
+                to='/feedback'
                 className='nav-links-mobile'
                 onClick={closeMobileMenu}
               >
@@ -62,7 +62,7 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle='btn--outline' link='feedback'>Feedback</Button>}
+          {<Button buttonStyle='btn--outline' link='feedback'>Feedback</Button>}
         </div>
       </nav>
     </>
