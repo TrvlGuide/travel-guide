@@ -15,6 +15,7 @@ import { useEffect } from 'react';
 
 
 export default function Destinations() {
+  
   const [activeButton, setActiveButton] = useState('Indang'); // Set the default active button
   const handleButtonClick = (buttonName) => {
     setActiveButton(buttonName);
