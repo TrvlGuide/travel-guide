@@ -29,23 +29,14 @@ const hotel = {
   height: "20px"
 };
 
- const MapConfig = {
-  id: 'dark',
-  label: 'Dark',
-  mapId: '739af084373f96fe',
-  mapTypeId: '739af084373f96fe',
-  styles: 'roadmap'
-};
-
 return (
   <APIProvider apiKey='AIzaSyC8kczNdBy9nt3qzpB1u0UCVguAsH_hU0Y'>
     <div className='destinations-container'>
 
-      <div className="destinations-content">
+      <div className="destinations-content active">
       <div className="destinations-title">
         <h2>Destinations</h2>
       </div>
-
       <div className='destination-buttons'>
         <Button
           className={`btns ${activeButton === 'Indang' ? 'active' : ''}`}

@@ -154,17 +154,34 @@
   
 }
 
-.destinations-title {
-  color: black;
-  margin: 5px;
-  margin-top: -500px;
+.destinations-content {
+  border-style: solid;
+  border-radius: 1rem;
+  background-color: rgb(175, 175, 175);
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  margin-top: -300px;
+  display: grid;
+  grid-template-rows: 0fr;
 }
 
 
+
+.destinations-title.active {
+  color: black;
+  margin: 5px;
+  overflow: hidden;
+}
+
+.destination-buttons.active{
+  overflow: hidden;
+}
 .destination-buttons .btn{
   margin-right: 16px;
   margin-bottom: 32px;
   color: black;
+  
 }
 
 
