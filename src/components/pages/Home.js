@@ -14,7 +14,7 @@ function Home() {
 
   return (
     <div className={`home-container ${isLoaded ? 'loaded' : ''}`}>
-      <img className='home-background' src="public/images/home-background.jpg" alt="" />
+      <img className='home-background' src="images/home-background.jpg" alt="" />
       <div className='title'>
         <h2>Travel Guide</h2>
         <p>Exploring Various Eco-Friendly Destinations in Cavite</p>
