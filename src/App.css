@@ -183,17 +183,6 @@
   opacity: 0;
 }
 
-.loaded .destinations-container {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-}
-
-.destinations-container {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
 
 .home-container {
   opacity: 0;

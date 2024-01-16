@@ -16,7 +16,6 @@ import { useEffect } from 'react';
 
 export default function Destinations() {
   const [activeButton, setActiveButton] = useState('Indang'); // Set the default active button
-  const [IsLoaded, setIsLoaded] = useState(true);
   const handleButtonClick = (buttonName) => {
     setActiveButton(buttonName);
   };
@@ -24,13 +23,6 @@ export default function Destinations() {
   
 const center = {lat: 14.153059856204539, lng: 120.90277126727229}
 
-useEffect(() => {
-  // Set isLoaded to true every time the component is accessed
-  setIsLoaded(true);
-
-  // Remove transition styles when the component is unmounted
-  return () => setIsLoaded(false);
-}, []);
 
 return (
   <APIProvider apiKey='AIzaSyC8kczNdBy9nt3qzpB1u0UCVguAsH_hU0Y'>
