@@ -145,19 +145,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   width: 100%;
+  opacity: .90; /* Set the opacity for a slightly transparent Google Form */
+  color: white;
+  background: black;
+  position: relative;
+  z-index: 99;
   
 }
 
 .destinations-title {
+  color: black;
   margin: 5px;
-  margin-top: 50px;
+  margin-top: -500px;
 }
 
 
 .destination-buttons .btn{
   margin-right: 16px;
+  margin-bottom: 32px;
+  color: black;
 }
 
 
@@ -168,15 +175,17 @@
 }
 
 .map1{
-  margin-top: 32px;
   height: 0;
   width: 0;
 }
 
 .map1.active {
-  margin-top: 32px;
-  height: 70vh;
-  width: 80%;
+  height: 100vh;
+  width: 100%;
+  position:absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .pins.pin{
