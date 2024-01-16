@@ -40,6 +40,8 @@ const hotel = {
 return (
   <APIProvider apiKey='AIzaSyC8kczNdBy9nt3qzpB1u0UCVguAsH_hU0Y'>
     <div className='destinations-container'>
+
+      <div className="destinations-content">
       <div className="destinations-title">
         <h2>Destinations</h2>
       </div>
@@ -82,6 +84,8 @@ return (
           Alfonso
         </Button>
       </div>
+      </div>
+      
       
        <div className={`map1 ${activeButton === 'Indang' ? 'active' : ''}`}>
           <Map 
@@ -91,7 +95,7 @@ return (
           gestureHandling={'greedy'}
           disableDefaultUI={true}>
             <AdvancedMarker className='pin' position={{lat:14.167903123721212, lng:120.86264725377701}}>
-            dsada
+            <FontAwesomeIcon icon={faLocationDot} style={hotel}/>
             
           </AdvancedMarker> 
           <AdvancedMarker className='pin' position={{lat:14.229933523566482, lng:120.8581316684386}}>
