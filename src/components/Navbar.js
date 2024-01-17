@@ -31,7 +31,7 @@ function Navbar() {
       <nav className='navbar'>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            TRVL Guide 
+            Travel
             <FontAwesomeIcon icon={faLocationDot} />
           </Link>
           <div className='menu-icon' onClick={handleClick}>

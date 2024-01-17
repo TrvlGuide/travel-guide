@@ -135,45 +135,72 @@
 
 .destinations-container {
   background-color: rgb(197, 197, 197);
-  height: 100vh;
+  position: relative;
+  height: 100%  ;
   width: 100%;
 }
 
 
 .destinations-container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start; /* Align to the top */
+  align-items: flex-start; /* Align to the left */
   width: 100%;
-  opacity: .90; /* Set the opacity for a slightly transparent Google Form */
+  opacity: .90;
   color: white;
   background: black;
-  position: relative;
-  z-index: 99;
-  
+
 }
 
 .destinations-content {
-  display: grid;
-  border-style: solid;
-  border-radius: 1rem;
-  background-color: rgb(175, 175, 175);
-  align-items: center;
-  justify-content: center;
-  margin-top: -450px;
-  padding: 1rem;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  margin-top: 1rem;
+  margin-left: 1rem; /* Adjusted to move to the top-left corner */
+  padding: 2rem;
   overflow: hidden;
-  max-width: 10rem;
   max-height: 0;
-  transition: max-width 0.8s ease-in, max-height 0.8s ease-in; /* Opening transition */
-  transform: translate(0, 50%);
+  transition: max-width 0.8s ease-in, max-height 0.8s ease-in;
+  transform: translate(0, 0);
 }
 
+.filter-buttons {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  
+}
 
+.filter-buttons .btn {
+  margin-right: 1rem;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.filter-buttons .btn:hover {
+  background-color: rgb(177, 177, 177);
+
+}
+.filter-buttons .btn:active {
+  transform: translateY(2px);
+}
 .destinations-content.active {
   overflow: hidden;
-  max-width: 100%;
+  max-width: 50%;
   max-height: 500px;
 }
 
@@ -222,11 +249,10 @@
 }
 
 .map1.active {
-  height: 100vh;
+  height: 91.2vh;
   width: 100%;
   position:absolute;
-  top: 0;
-  left: 0;
+  
   z-index: -1;
 }
 
