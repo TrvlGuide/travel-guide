@@ -19,13 +19,40 @@ import { ReactSVG } from 'react-svg';
 export default function Destinations() {
   const [isContentVisible, setContentVisible] = useState(false);
   const [activeButton, setActiveButton] = useState('Indang'); // Set the default active button
-  const handleButtonClick = (buttonName) => {
+  const [mapType, setMapType] = useState('accommodations'); // New state to track map type
+  const [isButtonClicked, setButtonClicked] = useState(false);
+  const handleButtonClick = (buttonName, type) => {
     setActiveButton(buttonName);
+    setMapType(type); // Set the map type
+    setButtonClicked(true);
+    setTimeout(() => {
+      setButtonClicked(false);
+    }, 100);
   };
+
+  const everything = (buttonName) => {
+    handleButtonClick(buttonName);
+    handleMapTypeToggle();
+  }
+  const handleMapTypeToggle = () => {
+    setMapType((prevMapType) =>
+      prevMapType === 'accommodations' ? 'destinations' : 'accommodations'
+    );
+  };
+
+  const handleAccommodationsToggle = () => {
+    setMapType('accommodations');
+  };
+
+  const handleDestinationsToggle = () => {
+    setMapType('destinations');
+  };
+
   
   useEffect(() => {
     const timer = setTimeout(() => {
-      setContentVisible(true);
+      setContentVisible(!isContentVisible);
+      setButtonClicked(false);
     }, 10); // Adjust the delay as needed
   
     return () => clearTimeout(timer);
@@ -62,42 +89,41 @@ return (
       </div>
       <div className={`destination-buttons ${isContentVisible ? 'active' : ''}`}>
         <Button
-          className={`btns ${activeButton === 'Indang' ? 'active' : ''}`}
+          id={`btns ${activeButton === 'Indang' ? 'active' : ''}`}
           link='Destinations'
           buttonSize='btn--large'
           buttonStyle={activeButton === 'Indang' ? 'btn--primary' : 'btn--outline'}
           onClick={() => 
-            handleButtonClick('Indang')
-           
+            everything('Indang')
         }
           
         >
           Indang
         </Button>
         <Button
-          className={`btns ${activeButton === 'Amadeo' ? 'active' : ''}`}
+          id={`btns ${activeButton === 'Amadeo' ? 'active' : ''}`}
           link='Destinations'
           buttonSize='btn--large'
           buttonStyle={activeButton === 'Amadeo' ? 'btn--primary' : 'btn--outline'}
-          onClick={() => handleButtonClick('Amadeo')}
+          onClick={() =>everything('Amadeo')}
         >
           Amadeo
         </Button>
         <Button
-          className={`btns ${activeButton === 'Tagaytay' ? 'active' : ''}`}
+          id={`btns ${activeButton === 'Tagaytay' ? 'active' : ''}`}
           link='Destinations'
           buttonSize='btn--large'
           buttonStyle={activeButton === 'Tagaytay' ? 'btn--primary' : 'btn--outline'}
-          onClick={() => handleButtonClick('Tagaytay')}
+          onClick={() =>  everything('Tagaytay')}
         >
           Tagaytay
         </Button>
         <Button
-          className={`btns ${activeButton === 'Alfonso' ? 'active' : ''}`}
+          id={`btns ${activeButton === 'Alfonso' ? 'active' : ''}`}
           link='Destinations'
           buttonSize='btn--large'
           buttonStyle={activeButton === 'Alfonso' ? 'btn--primary' : 'btn--outline'}
-          onClick={() => handleButtonClick('Alfonso')}
+          onClick={() =>  everything('Alfonso')}
         >
           Alfonso
         </Button>
@@ -106,14 +132,18 @@ return (
       
 
     <div className='filter-buttons'>
-        <Button className='btns' link='Destinations' buttonSize='btn--medium' buttonStyle='btn--primary'>
+        <Button className='btns' link='Destinations' buttonSize='btn--medium' buttonStyle='btn--primary' 
+        onClick={handleAccommodationsToggle}>
         Accomodations
         </Button>
-        <Button className='btns' link='Destinations' buttonSize='btn--medium' buttonStyle='btn--primary'>
+        <Button className='btns' link='Destinations' buttonSize='btn--medium' buttonStyle='btn--primary'
+        onClick={handleDestinationsToggle}>
         Destinations
         </Button>
       </div>
-       <div className={`map1 ${activeButton === 'Indang' ? 'active' : ''}`}>
+    </div>
+
+    <div className={`map1 ${activeButton === 'Indang' && mapType === 'accommodations' ? 'active' : ''}`}>
           <Map 
           zoom={12} 
           center = {{lat:14.191760936999954, lng:120.8727514189682}} 
@@ -138,7 +168,20 @@ return (
             <FontAwesomeIcon icon={faBed} style={hotel}/>
           </AdvancedMarker> 
 
-          {/* DESTINATIONS */}
+
+          </Map>
+      
+        </div>
+
+        <div className={`map1 ${activeButton === 'Indang' && mapType === 'destinations' ? 'active' : ''}`}>
+          <Map 
+          zoom={12} 
+          center = {{lat:14.191760936999954, lng:120.8727514189682}} 
+          mapId='7221de5946eae6f5' 
+          gestureHandling={'greedy'}
+          disableDefaultUI={true}>
+
+             {/* DESTINATIONS */}
 
           <AdvancedMarker className='pin'position={{lat:14.157482118744753, lng:120.90333919075216}}>
               <box-icon name='plane-alt' type='solid' color='#ffa500' style={{fontSize: '24px'}}></box-icon>
@@ -147,11 +190,27 @@ return (
           <AdvancedMarker className='pin'position={{lat:14.163885720325474, lng:120.89050506103825}}>
               <box-icon name='plane-alt' type='solid' color='#ffa500' style={{fontSize: '24px'}}></box-icon>
           </AdvancedMarker> 
-          </Map>
-      
-        </div>
 
-        <div className={`map1 ${activeButton === 'Amadeo' ? 'active' : ''}` } >
+          <AdvancedMarker className='pin'position={{lat:14.146800384565335, lng:120.89704937831564}}>
+              <box-icon name='plane-alt' type='solid' color='#ffa500' style={{fontSize: '24px'}}></box-icon>
+          </AdvancedMarker> 
+
+          <AdvancedMarker className='pin'position={{lat:14.262583801094756, lng:120.71782499610825}}>
+              <box-icon name='plane-alt' type='solid' color='#ffa500' style={{fontSize: '24px'}}></box-icon>
+          </AdvancedMarker> 
+
+          <AdvancedMarker className='pin'position={{lat:14.146712000151966, lng:120.95665085377667}}>
+              <box-icon name='plane-alt' type='solid' color='#ffa500' style={{fontSize: '24px'}}></box-icon>
+          </AdvancedMarker> 
+
+          <AdvancedMarker className='pin'position={{lat:14.149757059716062, lng:120.90392949610707}}>
+              <box-icon name='plane-alt' type='solid' color='#ffa500' style={{fontSize: '24px'}}></box-icon>
+          </AdvancedMarker> 
+          
+          </Map>
+          </div>
+
+          <div className={`map1 ${activeButton === 'Amadeo' && mapType === 'accommodations' ? 'active' : ''}`}>
           <Map zoom={12} center = {center} mapId='7221de5946eae6f5' gestureHandling={'greedy'}
           disableDefaultUI={true}>
             <AdvancedMarker className='pin' position={{lat:14.182462219192988, lng:120.92996380960277}}>
@@ -172,6 +231,35 @@ return (
           </Map>
       
         </div>
+
+        <div className={`map1 ${activeButton === 'Amadeo' && mapType === 'destinations' ? 'active' : ''}`}>
+          <Map 
+          zoom={12} 
+          center = {center} 
+          mapId='7221de5946eae6f5' 
+          gestureHandling={'greedy'}
+          disableDefaultUI={true}>
+
+             {/* DESTINATIONS */}
+
+          <AdvancedMarker className='pin'position={{lat:14.129376987157674, lng:120.94095633085776}}>
+              <box-icon name='plane-alt' type='solid' color='#ffa500' style={{fontSize: '24px'}}></box-icon>
+          </AdvancedMarker> 
+
+          <AdvancedMarker className='pin'position={{lat:14.212665948563307, lng:120.91739600415792}}>
+              <box-icon name='plane-alt' type='solid' color='#ffa500' style={{fontSize: '24px'}}></box-icon>
+          </AdvancedMarker> 
+
+          <AdvancedMarker className='pin'position={{lat:14.211145435627525, lng:120.92244243723228}}>
+              <box-icon name='plane-alt' type='solid' color='#ffa500' style={{fontSize: '24px'}}></box-icon>
+          </AdvancedMarker> 
+
+          <AdvancedMarker className='pin'position={{lat:14.198636955767084, lng:120.93483713324356}}>
+              <box-icon name='plane-alt' type='solid' color='#ffa500' style={{fontSize: '24px'}}></box-icon>
+          </AdvancedMarker> 
+
+          </Map>
+          </div>
 
         <div className={`map1 ${activeButton === 'Tagaytay' ? 'active' : ''}`} >
           <Map zoom={12} center = {center} mapId='7221de5946eae6f5' gestureHandling={'greedy'}
@@ -376,7 +464,6 @@ return (
           </AdvancedMarker> 
           </Map>
 
-          
       
         </div>
 
@@ -407,10 +494,6 @@ return (
           </Map>
       
         </div>
-
-
-      
-    </div>
     </APIProvider>
   );
 }
