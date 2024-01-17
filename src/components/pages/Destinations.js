@@ -57,6 +57,8 @@ export default function Destinations() {
   
     return () => clearTimeout(timer);
   }, [activeButton]);
+
+
 const setContentVisibility = () => {
   setContentVisible(!isContentVisible);
 }
@@ -508,12 +510,35 @@ return (
           <AdvancedMarker className='pin'position={{lat:14.09597682035975, lng:120.94165973811404}}>
               <box-icon name='plane-alt' type='solid' color='#ffa500' style={{fontSize: '24px'}}></box-icon>
           </AdvancedMarker>
+
+          <AdvancedMarker className='pin'position={{lat:14.124945724304308, lng:120.94182550284434}}>
+              <box-icon name='plane-alt' type='solid' color='#ffa500' style={{fontSize: '24px'}}></box-icon>
+          </AdvancedMarker>
+
+          <AdvancedMarker className='pin'position={{lat:14.098780628038178, lng:120.92412440988309}}>
+              <box-icon name='plane-alt' type='solid' color='#ffa500' style={{fontSize: '24px'}}></box-icon>
+          </AdvancedMarker>
+          
+          <AdvancedMarker className='pin'position={{lat:14.12593805941988, lng:120.99658811673318}}>
+              <box-icon name='plane-alt' type='solid' color='#ffa500' style={{fontSize: '24px'}}></box-icon>
+          </AdvancedMarker>
+
+          <AdvancedMarker className='pin'position={{lat:14.124713170249542, lng:120.99779329592141}}>
+              <box-icon name='plane-alt' type='solid' color='#ffa500' style={{fontSize: '24px'}}></box-icon>
+          </AdvancedMarker>
+
+          <AdvancedMarker className='pin'position={{lat:14.141656371951665, lng:121.02194053194306}}>
+              <box-icon name='plane-alt' type='solid' color='#ffa500' style={{fontSize: '24px'}}></box-icon>
+          </AdvancedMarker>
+
+          <AdvancedMarker className='pin'position={{lat:14.095403650319115, lng:120.93467278551168}}>
+              <box-icon name='plane-alt' type='solid' color='#ffa500' style={{fontSize: '24px'}}></box-icon>
+          </AdvancedMarker>
           
           </Map>
           </div>
 
-        <div className={`map1 ${activeButton === 'Alfonso' ? 'active' : ''}`} gestureHandling={'greedy'}
-          disableDefaultUI={true}>
+          <div className={`map1 ${activeButton === 'Alfonso' && mapType === 'accommodations' ? 'active' : ''}`}> 
           <Map zoom={12} center = {center} mapId='7221de5946eae6f5' gestureHandling={'greedy'}
           disableDefaultUI={true}>
             <AdvancedMarker className='pin' position={{lat:14.079708534319122, lng:120.84574831353434}}>
@@ -538,6 +563,68 @@ return (
           </Map>
       
         </div>
+
+        <div className={`map1 ${activeButton === 'Alfonso' && mapType === 'destinations' ? 'active' : ''}`}>
+          <Map 
+          zoom={12} 
+          center = {center} 
+          mapId='7221de5946eae6f5' 
+          gestureHandling={'greedy'}
+          disableDefaultUI={true}>
+
+             {/* DESTINATIONS */}
+
+          <AdvancedMarker className='pin'position={{lat:14.1372725540555, lng:120.84849590732821}}>
+              <box-icon name='plane-alt' type='solid' color='#ffa500' style={{fontSize: '24px'}}></box-icon>
+          </AdvancedMarker> 
+
+          <AdvancedMarker className='pin'position={{lat:14.11134977536654, lng:120.8723638208063}}>
+              <box-icon name='plane-alt' type='solid' color='#ffa500' style={{fontSize: '24px'}}></box-icon>
+          </AdvancedMarker> 
+
+          <AdvancedMarker className='pin'position={{lat:114.151337158052671, lng:120.84809866799267}}>
+              <box-icon name='plane-alt' type='solid' color='#ffa500' style={{fontSize: '24px'}}></box-icon>
+          </AdvancedMarker> 
+
+          <AdvancedMarker className='pin'position={{lat:14.086071893047846, lng:120.88752691355883}}>
+              <box-icon name='plane-alt' type='solid' color='#ffa500' style={{fontSize: '24px'}}></box-icon>
+          </AdvancedMarker> 
+
+          
+          <AdvancedMarker className='pin'position={{lat:14.11745337321779, lng:120.87578174219347}}>
+              <box-icon name='plane-alt' type='solid' color='#ffa500' style={{fontSize: '24px'}}></box-icon>
+          </AdvancedMarker>
+
+          <AdvancedMarker className='pin'position={{lat:14.099640653624752, lng:120.88222525362706}}>
+              <box-icon name='plane-alt' type='solid' color='#ffa500' style={{fontSize: '24px'}}></box-icon>
+          </AdvancedMarker>
+
+          <AdvancedMarker className='pin'position={{lat:14.145948880465225, lng:120.83859800133132}}>
+              <box-icon name='plane-alt' type='solid' color='#ffa500' style={{fontSize: '24px'}}></box-icon>
+          </AdvancedMarker>
+
+          <AdvancedMarker className='pin'position={{lat:14.101630269587005, lng:120.88673034052633}}>
+              <box-icon name='plane-alt' type='solid' color='#ffa500' style={{fontSize: '24px'}}></box-icon>
+          </AdvancedMarker>
+
+          <AdvancedMarker className='pin'position={{lat:14.58101862614421, lng:121.17815504433969}}>
+              <box-icon name='plane-alt' type='solid' color='#ffa500' style={{fontSize: '24px'}}></box-icon>
+          </AdvancedMarker>
+          
+          <AdvancedMarker className='pin'position={{lat:14.109281270807942, lng:120.86205176727171}}>
+              <box-icon name='plane-alt' type='solid' color='#ffa500' style={{fontSize: '24px'}}></box-icon>
+          </AdvancedMarker>
+
+          <AdvancedMarker className='pin'position={{lat:14.087731598187629, lng:120.86670414633028}}>
+              <box-icon name='plane-alt' type='solid' color='#ffa500' style={{fontSize: '24px'}}></box-icon>
+          </AdvancedMarker>
+          
+          <AdvancedMarker className='pin'position={{lat:14.105636016935343, lng:120.84871724963047}}>
+              <box-icon name='plane-alt' type='solid' color='#ffa500' style={{fontSize: '24px'}}></box-icon>
+          </AdvancedMarker>
+          
+          </Map>
+          </div>
     </APIProvider>
   );
 }
