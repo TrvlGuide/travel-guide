@@ -174,33 +174,7 @@
   
 }
 
-.filter-buttons {
-  margin-top: 1rem;
-  margin-left: 1rem;
-  
-}
 
-.filter-buttons .btn {
-  margin-right: 1rem;
-  font-size: 24px;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  color: #fff;
-  background-color: #04AA6D;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-  transform: translate(0,0);
-}
-
-.filter-buttons .btn:hover {
-  background-color: rgb(177, 177, 177);
-
-}
-.filter-buttons .btn:active {
-  transform: translateY(2px);
-}
 .destinations-content.active {
   overflow: hidden;
   max-height: 500px;
@@ -321,4 +295,8 @@ button#btns\ active{
   .filter-buttons .btn:active {
     transform: translateY(2px);
   }
+}
+
+.info:hover {
+  
 }

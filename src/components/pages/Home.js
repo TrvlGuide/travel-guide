@@ -5,6 +5,7 @@ import { Button } from '../Button';
 function Home() {
   const [isLoaded, setIsLoaded] = useState(false); // New state variable
 
+  
   useEffect(() => {
     // Set isLoaded to true every time the component is accessed
     setIsLoaded(true);
