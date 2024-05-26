@@ -139,7 +139,7 @@ export default function Destinations() {
 	});
 
 	return (
-		<APIProvider apiKey='YOUR_API_KEY'>
+		<APIProvider apiKey={process.env.GOOGLE_MAPS_API_KEY}>
 			<div className='destinations-container'>
 				<div
 					onClick={() => setContentVisible(!isContentVisible)}
