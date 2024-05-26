@@ -1,302 +1,275 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Josefin Sans', sans-serif;
-
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Josefin Sans", sans-serif;
 }
 
-.Home,.Destinations,.Feedback {
-  display: flex;
-  height: 90vh;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  
+.Home,
+.Destinations,
+.Feedback {
+	display: flex;
+	height: 90vh;
+	align-items: center;
+	justify-content: center;
+	font-size: 3rem;
 }
 
 .home-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
-  width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 90vh;
+	width: 100%;
 }
 
 .home-background {
-  object-fit: cover;
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  z-index: -1;
+	object-fit: cover;
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	z-index: -1;
 }
 
 .title {
-  margin: 5px;
-  color: rgb(255, 255, 255);
-  text-align: center;
+	margin: 5px;
+	color: rgb(255, 255, 255);
+	text-align: center;
 }
 
-
-
 .buttons .btn {
-  margin-right: 16px;
-
+	margin-right: 16px;
 }
 
 .title > h2 {
-  margin-top: -200px;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 100px;
-  font-weight: 500;
+	margin-top: -200px;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 100px;
+	font-weight: 500;
 }
 
 .title > p {
-  font-weight: 400;
-  font-size: 50px;
-  margin-left: 300px;
-  margin-right: 300px;
+	font-weight: 400;
+	font-size: 50px;
+	margin-left: 300px;
+	margin-right: 300px;
 }
 
 @media screen and (max-width: 1400px) {
-  .buttons .btn {
-    margin-right: 16px;
-  
-  }
-  
-  .title > h2 {
-    margin-top: -200px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 100px;
-    font-weight: 500;
-  }
-  
-  .title > p {
-    font-weight: 400;
-    font-size: 50px;
-    margin-left: 200px;
-    margin-right: 200px;
-  }
-  
-}
+	.buttons .btn {
+		margin-right: 16px;
+	}
 
+	.title > h2 {
+		margin-top: -200px;
+		font-family: "Josefin Sans", sans-serif;
+		font-size: 100px;
+		font-weight: 500;
+	}
+
+	.title > p {
+		font-weight: 400;
+		font-size: 50px;
+		margin-left: 200px;
+		margin-right: 200px;
+	}
+}
 
 @media screen and (max-width: 960px) {
+	.buttons .btn {
+		margin-right: 16px;
+	}
 
-  .buttons .btn {
-    margin-right: 16px;
-  
-  }
-  
-  .title > h2 {
-    margin-top: -250px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 90px;
-    font-weight: 500;
-  }
-  
-  .title > p {
-    font-weight: 400;
-    font-size: 45px;
-    margin-left: 150px;
-    margin-right: 150px;
-  }
+	.title > h2 {
+		margin-top: -250px;
+		font-family: "Josefin Sans", sans-serif;
+		font-size: 90px;
+		font-weight: 500;
+	}
 
-  
+	.title > p {
+		font-weight: 400;
+		font-size: 45px;
+		margin-left: 150px;
+		margin-right: 150px;
+	}
 }
-
 
 @media screen and (max-width: 768px) {
-  .title {
-    color: rgb(255, 255, 255);
-    text-align: center;
-  }
+	.title {
+		color: rgb(255, 255, 255);
+		text-align: center;
+	}
 
-  .buttons .btn {
-    margin-right: 16px;
-  }
-  
-  .title > h2 {
-    margin-top: -200px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 70px;
-    font-weight: 500;
-  }
-  
-  .title > p {
-    font-weight: 400;
-    font-size: 30px;
-    margin-left: 100px;
-    margin-right: 100px;
-  }
+	.buttons .btn {
+		margin-right: 16px;
+	}
+
+	.title > h2 {
+		margin-top: -200px;
+		font-family: "Josefin Sans", sans-serif;
+		font-size: 70px;
+		font-weight: 500;
+	}
+
+	.title > p {
+		font-weight: 400;
+		font-size: 30px;
+		margin-left: 100px;
+		margin-right: 100px;
+	}
 }
 
-
-
 .destinations-container {
-  background-color: rgb(197, 197, 197);
-  position: relative;
-  height: 100%  ;
-  width: 100%;
+	background-color: rgb(197, 197, 197);
+	position: fixed;
 }
 
-
 .destinations-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start; /* Align to the top */
-  align-items: flex-start; /* Align to the left */
-  width: 100%;
-  opacity: 100;
-  color: white;
-  background: none;
-
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start; /* Align to the top */
+	align-items: flex-start; /* Align to the left */
+	opacity: 100;
+	color: white;
+	background: none;
+	z-index: 100;
 }
 
 .destinations-content {
-  font-size: 24px;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  color: #fff;
-  background-color: #04AA6D;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-  margin-top: 1rem;
-  margin-left: 1rem; /* Adjusted to move to the top-left corner */
-  padding: 2rem;
-  overflow: hidden;
-  max-height: 0;
-  transition: max-width 0.8s ease-in, max-height 0.8s ease-in;
-  
+	font-size: 24px;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	color: #fff;
+	background-color: #04aa6d;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 9px #999;
+	margin-top: 1rem;
+	margin-left: 1rem; /* Adjusted to move to the top-left corner */
+	padding: 2rem;
+	overflow: hidden;
+	max-height: 0;
+	transition: max-width 0.8s ease-in, max-height 0.8s ease-in;
 }
-
 
 .destinations-content.active {
-  overflow: hidden;
-  max-height: 500px;
+	overflow: hidden;
+	max-height: 500px;
 }
 
-.expand{
-  opacity: 0;
-  transform: translate(0%, -25%);
+.expand {
+	opacity: 0;
+	transform: translate(0%, -25%);
 }
 
-.expand.active{
-  transition: opacity, ease-in-out;
-  transition-delay:0.5s;
-  opacity: 100;
+.expand.active {
+	transition: opacity, ease-in-out;
+	transition-delay: 0.5s;
+	opacity: 100;
 }
 
-.destinations-title{
-  transition: opacity 0.7s ease;
-  transition-delay: 0.4s;
-  opacity: 0;
-  margin: 5px;
+.destinations-title {
+	transition: opacity 0.7s ease;
+	transition-delay: 0.4s;
+	opacity: 0;
+	margin: 5px;
 }
 
 .destinations-title.active {
-  transition: opacity 0.7s ease;
-  opacity: 100;
-  color: rgb(255, 255, 255);
-  
+	transition: opacity 0.7s ease;
+	opacity: 100;
+	color: rgb(255, 255, 255);
 }
 
-.destination-buttons .btn{
-  margin-right: 16px;
-  margin-bottom: 32px;
-  color: rgb(255, 255, 255);
-  
+.destination-buttons .btn {
+	margin-right: 16px;
+	margin-bottom: 32px;
+	color: rgb(255, 255, 255);
 }
 
-.destination-buttons .btn:active{
-  color: rgb(0, 0, 0);
-  
+.destination-buttons .btn:active {
+	color: rgb(0, 0, 0);
 }
-button#btns\ active{
-  color: #000;
+button#btns\ active {
+	color: #000;
 }
 .destinations-title > h2 {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 100px;
-  font-weight: 500;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 100px;
+	font-weight: 500;
 }
 
 .map1 {
-  height: 0;
-  width: 0;
-  position: absolute;
-  z-index: -2;
+	height: 0;
+	width: 0;
+	position: absolute;
 }
 
 .map1.active {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  z-index: -1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
 }
 
-.pins.pin{
-  opacity: 0;
+.pins.pin {
+	opacity: 0;
 }
-
 
 .home-container {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
 }
 
 .home-container.loaded {
-  opacity: 1;
+	opacity: 1;
 }
 
 @media screen and (max-width: 960px) {
-  .destinations-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .destinations-content{
-    margin-left: 0;
-    align-items: center;
-  }
-  .destinations-title > h2{
-    font-size: 50px;
-  }
+	.destinations-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.destinations-content {
+		margin-left: 0;
+		align-items: center;
+	}
+	.destinations-title > h2 {
+		font-size: 50px;
+	}
 }
 @media screen and (max-width: 425px) {
-  .destinations-content{
-    margin-left: 0;
-    box-shadow: 0 6px #999;
-    padding: 1rem;
-  }
-  .filter-buttons .btn {
-    margin-right: 1rem;
-    font-size: 20px;
-    text-align: center;
-    cursor: pointer;
-    outline: none;
-    color: #fff;
-    background-color: #04AA6D;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
-  }
-  
-  .filter-buttons .btn:hover {
-    background-color: rgb(177, 177, 177);
-  
-  }
-  .filter-buttons .btn:active {
-    transform: translateY(2px);
-  }
+	.destinations-content {
+		margin-left: 0;
+		box-shadow: 0 6px #999;
+		padding: 1rem;
+	}
+	.filter-buttons .btn {
+		margin-right: 1rem;
+		font-size: 20px;
+		text-align: center;
+		cursor: pointer;
+		outline: none;
+		color: #fff;
+		background-color: #04aa6d;
+		border: none;
+		border-radius: 15px;
+		box-shadow: 0 9px #999;
+	}
+
+	.filter-buttons .btn:hover {
+		background-color: rgb(177, 177, 177);
+	}
+	.filter-buttons .btn:active {
+		transform: translateY(2px);
+	}
 }
 
 .info:hover {
-  
 }
