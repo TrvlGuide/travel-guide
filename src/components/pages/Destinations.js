@@ -91,7 +91,7 @@ export default function Destinations() {
 				<div className='icon'>
 					<i
 						aria-hidden='true'
-						className={`fa solid fa-${property.type}`}
+						className={`fas fa-${property.type}`}
 						title={`${property.type}`}></i>
 				</div>
 				<div className='details'>

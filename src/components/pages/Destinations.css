@@ -257,3 +257,28 @@ body {
 .property:not(.highlight):has(.fa-dog)::after {
 	border-top: 9px solid var(--building-color);
 }
+
+/* tree */
+.property.highlight:has(.fa-dragon) .icon {
+	color: var(--shop-color);
+}
+
+.property:not(.highlight):has(.fa-dragon) {
+	background-color: var(--shop-color);
+}
+
+.property:not(.highlight):has(.fa-dragon)::after {
+	border-top: 9px solid var(--shop-color);
+}
+
+.property.highlight:has(.fa-dragon) .icon {
+	color: var(--shop-color);
+}
+
+.property:not(.highlight):has(.fa-dragon) {
+	background-color: var(--shop-color);
+}
+
+.property:not(.highlight):has(.fa-dragon)::after {
+	border-top: 9px solid var(--shop-color);
+}

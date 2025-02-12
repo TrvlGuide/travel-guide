@@ -295,7 +295,7 @@ const properties = {
 			address: "Reptiland Adventure",
 			description:
 				"Reptiland Adventure offers exciting reptile encounters and outdoor activities.",
-			type: "tree",
+			type: "dragon",
 			position: {
 				lat: 14.102340213794802,
 				lng: 120.85333330960178,
