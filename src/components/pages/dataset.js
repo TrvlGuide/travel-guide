@@ -256,7 +256,7 @@ const properties = {
 			address: "Eljoy’s Forest Resort",
 			description:
 				"Eljoy’s Forest Resort offers a serene getaway amidst nature.",
-			type: "umbrella-beach",
+			type: "tree",
 			position: {
 				lat: 14.109437348359055,
 				lng: 120.86205176765863,
@@ -295,7 +295,7 @@ const properties = {
 			address: "Reptiland Adventure",
 			description:
 				"Reptiland Adventure offers exciting reptile encounters and outdoor activities.",
-			type: "reptile",
+			type: "tree",
 			position: {
 				lat: 14.102340213794802,
 				lng: 120.85333330960178,
